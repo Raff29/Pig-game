@@ -7,10 +7,10 @@ let lastDice;
 document.querySelector(".btn-roll").addEventListener("click", function () {
     if (gamePlaying) {
         //1. Random number
-        let dice = Math.floor(Math.random() * 6) + 1;
+        const dice = Math.floor(Math.random() * 6) + 1;
 
         //2. Display the result
-        let diceDOM = document.querySelector(".dice");
+        const diceDOM = document.querySelector(".dice");
         diceDOM.style.display = "block";
         diceDOM.src = "dice-" + dice + ".png";
 
@@ -46,7 +46,7 @@ document.querySelector(".btn-hold").addEventListener("click", function () {
     document.querySelector("#score-" + activePlayer).textContent = scores[activePlayer];
 
 
-    let input = document.querySelector(".final-score").value;
+    const input = document.querySelector(".final-score").value;
     let winningScore;
    // undefined, 0, null or ""  COERCED to false
    // Anything else is COERCED to true
